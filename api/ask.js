@@ -16,5 +16,14 @@ export default async function handler(req, res) {
     })
   });
   const data = await response.json();
-  res.status(200).json(data);
+  res.status(200).json({ text: data.content?.[0]?.text || '' });
 }
+```
+
+And in `index.html` find:
+```
+txt.textContent = data.content?.[0]?.text ||
+```
+Change to:
+```
+txt.textContent = data.text ||

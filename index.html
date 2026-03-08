@@ -548,7 +548,7 @@ async function sendQ() {
       })
     });
     const data = await res.json();
-    txt.textContent = data.content?.[0]?.text || "Couldn't get a response. Reach Stacy at stacyleerobinson@gmail.com.";
+        txt.textContent = data.text || "Couldn't get a response. Reach Stacy at stacyleerobinson@gmail.com.";
   } catch {
     txt.textContent = "Something went wrong. Reach Stacy at stacyleerobinson@gmail.com or on LinkedIn.";
   }

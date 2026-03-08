@@ -1,0 +1,568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; min-height: 15.0px}
+    span.s1 {font: 13.0px 'Zapf Dingbats'}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1">&lt;meta name="color-scheme" content="light"&gt;</p>
+<p class="p1">&lt;title&gt;Stacy Robinson — IT Support &amp; Operations&lt;/title&gt;</p>
+<p class="p1">&lt;link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>:root {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--bg: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--white: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--bg2: #f4f7ff;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--ink: #22223b;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--ink-mid: #5c5f7a;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--ink-soft: #a0a3bc;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--blue: #5b7fff;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--blue-light: #eef2ff;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--teal: #00b894;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--teal-light: #e0faf4;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--coral: #ff7e67;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--coral-light: #fff0ee;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--line: #eceef8;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--radius: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--serif: 'Lora', serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--sans: 'Plus Jakarta Sans', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>html { scroll-behavior: smooth; color-scheme: light only; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-weight: 400; line-height: 1.65; overflow-x: hidden; forced-color-adjust: none; }</p>
+<p class="p2"><br></p>
+<p class="p1">nav {</p>
+<p class="p1">position: fixed; top: 0; left: 0; right: 0; z-index: 200;</p>
+<p class="p1">display: flex; align-items: center; justify-content: space-between;</p>
+<p class="p1">padding: 0.9rem 2.5rem;</p>
+<p class="p1">background: rgba(255,255,255,0.95); backdrop-filter: blur(18px);</p>
+<p class="p1">border-bottom: 1px solid var(–line);</p>
+<p class="p1">}</p>
+<p class="p1">.nav-logo { font-family: var(–serif); font-weight: 600; font-size: 1rem; color: var(–ink); text-decoration: none; }</p>
+<p class="p1">.nav-links { display: flex; gap: 0.15rem; list-style: none; }</p>
+<p class="p1">.nav-links a { font-size: 0.78rem; font-weight: 500; color: var(–ink-mid); text-decoration: none; padding: 0.38rem 0.85rem; border-radius: 8px; transition: background 0.15s, color 0.15s; }</p>
+<p class="p1">.nav-links a:hover { background: var(–blue-light); color: var(–blue); }</p>
+<p class="p1">.nav-cta { font-size: 0.78rem; font-weight: 600; background: var(–teal); color: #fff; padding: 0.42rem 1.1rem; border-radius: 8px; text-decoration: none; transition: opacity 0.2s; }</p>
+<p class="p1">.nav-cta:hover { opacity: 0.85; }</p>
+<p class="p2"><br></p>
+<p class="p1">.hero { min-height: 100vh; max-width: 1060px; margin: 0 auto; padding: 9rem 2.5rem 5rem; display: flex; flex-direction: column; justify-content: center; position: relative; }</p>
+<p class="p1">.hero::before { content: ‘’; position: fixed; top: 0; left: 0; right: 0; height: 100vh; background: radial-gradient(ellipse at 80% 20%, rgba(91,127,255,0.08) 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(0,184,148,0.07) 0%, transparent 55%); pointer-events: none; z-index: -1; }</p>
+<p class="p1">.hero-pill { display: inline-flex; align-items: center; gap: 0.5rem; background: var(–teal-light); color: var(–teal); font-size: 0.73rem; font-weight: 600; padding: 0.38rem 1rem; border-radius: 100px; margin-bottom: 1.75rem; width: fit-content; opacity: 0; animation: rise 0.65s ease forwards; }</p>
+<p class="p1">.hero-pill-dot { width: 7px; height: 7px; background: var(–teal); border-radius: 50%; display: inline-block; }</p>
+<p class="p1">.hero-h1 { font-family: var(–serif); font-size: clamp(2.8rem, 7vw, 5.6rem); font-weight: 600; line-height: 1.06; letter-spacing: -0.02em; margin-bottom: 1.4rem; opacity: 0; animation: rise 0.65s ease 0.1s forwards; }</p>
+<p class="p1">.hero-h1 em { font-style: italic; font-weight: 400; color: var(–ink-mid); }</p>
+<p class="p1">.hero-sub { font-size: 1.05rem; color: var(–ink-mid); max-width: 510px; line-height: 1.8; margin-bottom: 2.25rem; opacity: 0; animation: rise 0.65s ease 0.2s forwards; }</p>
+<p class="p1">.hero-btns { display: flex; gap: 0.75rem; flex-wrap: wrap; opacity: 0; animation: rise 0.65s ease 0.3s forwards; }</p>
+<p class="p1">.btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.72rem 1.5rem; border-radius: 10px; font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: all 0.18s; font-family: var(–sans); cursor: pointer; border: none; }</p>
+<p class="p1">.btn-blue { background: var(–blue); color: #fff; }</p>
+<p class="p1">.btn-blue:hover { background: #2c47d9; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(61,90,241,0.25); }</p>
+<p class="p1">.btn-outline { background: transparent; color: var(–ink); border: 1.5px solid var(–line); }</p>
+<p class="p1">.btn-outline:hover { border-color: var(–blue); color: var(–blue); transform: translateY(-1px); }</p>
+<p class="p1">.hero-foot { position: absolute; bottom: 2.5rem; left: 2.5rem; display: flex; gap: 2.5rem; opacity: 0; animation: rise 0.65s ease 0.45s forwards; }</p>
+<p class="p1">.hf-num { font-family: var(–serif); font-size: 1.7rem; font-weight: 600; line-height: 1; }</p>
+<p class="p1">.hf-label { font-size: 0.7rem; color: var(–ink-soft); font-weight: 500; margin-top: 0.2rem; }</p>
+<p class="p2"><br></p>
+<p class="p1">.wrap { max-width: 1060px; margin: 0 auto; padding: 4.5rem 2.5rem; }</p>
+<p class="p1">.divider { height: 1px; background: var(–line); max-width: 1060px; margin: 0 auto; }</p>
+<p class="p1">.eyebrow { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; color: var(–blue); margin-bottom: 0.65rem; }</p>
+<p class="p1">.sec-h { font-family: var(–serif); font-size: clamp(1.6rem, 3vw, 2.3rem); font-weight: 600; line-height: 1.2; letter-spacing: -0.015em; margin-bottom: 2.25rem; }</p>
+<p class="p1">.sec-h em { font-style: italic; font-weight: 400; color: var(–ink-mid); }</p>
+<p class="p1">.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }</p>
+<p class="p1">.reveal.on { opacity: 1; transform: none; }</p>
+<p class="p2"><br></p>
+<p class="p1">.about-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3.5rem; align-items: start; }</p>
+<p class="p1">.about-body p { color: var(–ink-mid); font-size: 0.97rem; line-height: 1.85; margin-bottom: 1rem; }</p>
+<p class="p1">.stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }</p>
+<p class="p1">.stat-card { background: var(–white); border: 1px solid var(–line); border-radius: var(–radius); padding: 1.25rem 1.4rem; }</p>
+<p class="p1">.stat-card:nth-child(1) { border-top: 3px solid var(–blue); }</p>
+<p class="p1">.stat-card:nth-child(2) { border-top: 3px solid var(–teal); }</p>
+<p class="p1">.stat-card:nth-child(3) { border-top: 3px solid var(–coral); }</p>
+<p class="p1">.stat-card:nth-child(4) { border-top: 3px solid var(–blue); }</p>
+<p class="p1">.stat-n { font-family: var(–serif); font-size: 2rem; font-weight: 600; line-height: 1; }</p>
+<p class="p1">.stat-l { font-size: 0.72rem; color: var(–ink-soft); font-weight: 500; margin-top: 0.3rem; }</p>
+<p class="p2"><br></p>
+<p class="p1">.exp-list { display: flex; flex-direction: column; }</p>
+<p class="p1">.exp-row { display: grid; grid-template-columns: 175px 1fr; gap: 2.5rem; padding: 2rem 0; border-bottom: 1px solid var(–line); }</p>
+<p class="p1">.exp-row:first-child { border-top: 1px solid var(–line); }</p>
+<p class="p1">.exp-when { font-size: 0.72rem; font-weight: 500; color: var(–ink-soft); margin-bottom: 0.3rem; }</p>
+<p class="p1">.exp-co { font-size: 0.82rem; font-weight: 600; color: var(–ink); }</p>
+<p class="p1">.exp-loc { font-size: 0.72rem; color: var(–ink-soft); margin-top: 0.15rem; }</p>
+<p class="p1">.exp-title { font-family: var(–serif); font-size: 1.15rem; font-weight: 600; margin-bottom: 0.6rem; }</p>
+<p class="p1">.exp-body { color: var(–ink-mid); font-size: 0.91rem; line-height: 1.78; }</p>
+<p class="p1">.exp-body ul { padding-left: 1.1rem; }</p>
+<p class="p1">.exp-body li { margin-bottom: 0.35rem; }</p>
+<p class="p1">.tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.9rem; }</p>
+<p class="p1">.tag { font-size: 0.7rem; font-weight: 500; background: var(–blue-light); color: var(–blue); padding: 0.28rem 0.7rem; border-radius: 6px; }</p>
+<p class="p1">.tag:nth-child(3n+2) { background: var(–teal-light); color: var(–teal); }</p>
+<p class="p1">.tag:nth-child(3n) { background: var(–coral-light); color: var(–coral); }</p>
+<p class="p2"><br></p>
+<p class="p1">.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }</p>
+<p class="p1">.skill-card { background: var(–white); border: 1px solid var(–line); border-radius: var(–radius); padding: 1.5rem 1.6rem; }</p>
+<p class="p1">.skill-card:nth-child(1) { border-top: 3px solid var(–blue); }</p>
+<p class="p1">.skill-card:nth-child(2) { border-top: 3px solid var(–teal); }</p>
+<p class="p1">.skill-card:nth-child(3) { border-top: 3px solid var(–coral); }</p>
+<p class="p1">.skill-cat { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; }</p>
+<p class="p1">.skill-card:nth-child(1) .skill-cat { color: var(–blue); }</p>
+<p class="p1">.skill-card:nth-child(2) .skill-cat { color: var(–teal); }</p>
+<p class="p1">.skill-card:nth-child(3) .skill-cat { color: var(–coral); }</p>
+<p class="p1">#skills { background: var(–bg2); }</p>
+<p class="p1">#certifications { background: var(–bg2); }</p>
+<p class="p1">.skill-list { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }</p>
+<p class="p1">.skill-list li { font-size: 0.9rem; color: var(–ink-mid); display: flex; align-items: flex-start; gap: 0.5rem; }</p>
+<p class="p1">.skill-list li::before { content: ‘›’; color: var(–teal); font-weight: 700; flex-shrink: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1">.proj-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }</p>
+<p class="p1">.proj-card { background: var(–white); border: 1px solid var(–line); border-radius: var(–radius); padding: 1.75rem 1.85rem; transition: border-color 0.2s, box-shadow 0.2s; }</p>
+<p class="p1">.proj-card:hover { border-color: var(–blue); box-shadow: 0 4px 24px rgba(61,90,241,0.08); }</p>
+<p class="p1">.proj-num { font-size: 0.67rem; font-weight: 600; color: var(–ink-soft); letter-spacing: 0.1em; margin-bottom: 0.85rem; }</p>
+<p class="p1">.proj-title { font-family: var(–serif); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.55rem; line-height: 1.3; }</p>
+<p class="p1">.proj-desc { color: var(–ink-mid); font-size: 0.88rem; line-height: 1.75; margin-bottom: 1.1rem; }</p>
+<p class="p1">.proj-chip { display: inline-block; background: var(–teal-light); color: var(–teal); font-size: 0.7rem; font-weight: 600; padding: 0.28rem 0.75rem; border-radius: 6px; }</p>
+<p class="p2"><br></p>
+<p class="p1">.certs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }</p>
+<p class="p1">.cert-card { background: var(–white); border: 1px solid var(–line); border-radius: var(–radius); padding: 1.35rem 1.5rem; display: flex; align-items: flex-start; gap: 1rem; }</p>
+<p class="p1">.cert-icon { width: 38px; height: 38px; border-radius: 9px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }</p>
+<p class="p1">.cert-icon.earned { background: var(–teal-light); }</p>
+<p class="p1">.cert-icon.progress { background: var(–blue-light); }</p>
+<p class="p1">.cert-name { font-size: 0.9rem; font-weight: 600; color: var(–ink); margin-bottom: 0.2rem; line-height: 1.3; }</p>
+<p class="p1">.cert-issuer { font-size: 0.73rem; color: var(–ink-soft); }</p>
+<p class="p1">.cert-badge { display: inline-block; font-size: 0.65rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 5px; margin-top: 0.4rem; }</p>
+<p class="p1">.cert-badge.earned { background: var(–teal-light); color: var(–teal); }</p>
+<p class="p1">.cert-badge.progress { background: var(–blue-light); color: var(–blue); }</p>
+<p class="p2"><br></p>
+<p class="p1">/* ASK ME ANYTHING */</p>
+<p class="p1">.ama-wrap {</p>
+<p class="p1">background: linear-gradient(140deg, #16162a 0%, #1e2048 60%, #162338 100%);</p>
+<p class="p1">border-radius: 20px; padding: 3rem; position: relative; overflow: hidden;</p>
+<p class="p1">}</p>
+<p class="p1">.ama-wrap::before { content: ‘’; position: absolute; top: -80px; right: -80px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(61,90,241,0.25) 0%, transparent 65%); pointer-events: none; }</p>
+<p class="p1">.ama-wrap::after { content: ‘’; position: absolute; bottom: -60px; left: 15%; width: 220px; height: 220px; background: radial-gradient(circle, rgba(14,184,138,0.15) 0%, transparent 65%); pointer-events: none; }</p>
+<p class="p1">.ama-eyebrow { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; color: var(–teal); margin-bottom: 0.6rem; }</p>
+<p class="p1">.ama-h { font-family: var(–serif); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 600; color: #fff; margin-bottom: 0.7rem; line-height: 1.25; }</p>
+<p class="p1">.ama-sub { font-size: 0.9rem; color: rgba(255,255,255,0.5); margin-bottom: 1.75rem; max-width: 540px; line-height: 1.75; }</p>
+<p class="p1">.ama-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.4rem; position: relative; z-index: 1; }</p>
+<p class="p1">.ama-chip { font-size: 0.77rem; font-weight: 500; background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.7); padding: 0.38rem 0.9rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); cursor: pointer; transition: all 0.18s; font-family: var(–sans); }</p>
+<p class="p1">.ama-chip:hover { background: rgba(255,255,255,0.14); color: #fff; border-color: rgba(255,255,255,0.25); }</p>
+<p class="p1">.ama-row { display: flex; gap: 0.7rem; position: relative; z-index: 1; }</p>
+<p class="p1">.ama-input { flex: 1; background: rgba(255,255,255,0.07); border: 1.5px solid rgba(255,255,255,0.14); border-radius: 10px; padding: 0.85rem 1.2rem; color: #fff; font-size: 0.9rem; font-family: var(–sans); outline: none; transition: border-color 0.2s; }</p>
+<p class="p1">.ama-input::placeholder { color: rgba(255,255,255,0.3); }</p>
+<p class="p1">.ama-input:focus { border-color: var(–blue); }</p>
+<p class="p1">.ama-btn { background: var(–blue); color: #fff; border: none; border-radius: 10px; padding: 0.85rem 1.5rem; font-size: 0.85rem; font-weight: 600; font-family: var(–sans); cursor: pointer; transition: all 0.18s; white-space: nowrap; display: flex; align-items: center; gap: 0.4rem; }</p>
+<p class="p1">.ama-btn:hover { background: #2c47d9; transform: translateY(-1px); }</p>
+<p class="p1">.ama-btn:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }</p>
+<p class="p1">.ama-response { margin-top: 1.4rem; display: none; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1.35rem 1.6rem; position: relative; z-index: 1; }</p>
+<p class="p1">.ama-response.show { display: block; }</p>
+<p class="p1">.ama-resp-label { font-size: 0.67rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(–teal); margin-bottom: 0.7rem; }</p>
+<p class="p1">.ama-resp-text { font-size: 0.91rem; color: rgba(255,255,255,0.82); line-height: 1.82; white-space: pre-wrap; }</p>
+<p class="p1">.ama-typing { display: flex; gap: 5px; align-items: center; padding: 0.25rem 0; }</p>
+<p class="p1">.ama-typing span { width: 7px; height: 7px; background: rgba(255,255,255,0.4); border-radius: 50%; animation: bounce 1.2s ease infinite; }</p>
+<p class="p1">.ama-typing span:nth-child(2) { animation-delay: 0.2s; }</p>
+<p class="p1">.ama-typing span:nth-child(3) { animation-delay: 0.4s; }</p>
+<p class="p2"><br></p>
+<p class="p1">.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }</p>
+<p class="p1">.contact-body p { color: var(–ink-mid); font-size: 0.97rem; line-height: 1.82; margin-bottom: 1.5rem; }</p>
+<p class="p1">.contact-links { display: flex; flex-direction: column; gap: 0.65rem; }</p>
+<p class="p1">.c-link { display: flex; align-items: center; gap: 0.9rem; padding: 1rem 1.25rem; border-radius: var(–radius); border: 1.5px solid var(–line); text-decoration: none; color: var(–ink); background: var(–white); transition: all 0.18s; }</p>
+<p class="p1">.c-link:hover { border-color: var(–blue); box-shadow: 0 4px 16px rgba(61,90,241,0.1); transform: translateY(-1px); }</p>
+<p class="p1">.c-icon { width: 36px; height: 36px; border-radius: 9px; background: var(–blue-light); color: var(–blue); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; flex-shrink: 0; }</p>
+<p class="p1">.c-main { font-size: 0.88rem; font-weight: 600; }</p>
+<p class="p1">.c-sub { font-size: 0.72rem; color: var(–ink-soft); }</p>
+<p class="p1">.c-arrow { margin-left: auto; color: var(–ink-soft); font-size: 1rem; }</p>
+<p class="p2"><br></p>
+<p class="p1">footer { border-top: 1px solid var(–line); padding: 1.75rem 2.5rem; max-width: 1060px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }</p>
+<p class="p1">footer p { font-size: 0.75rem; color: var(–ink-soft); font-weight: 500; }</p>
+<p class="p2"><br></p>
+<p class="p1">@keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }</p>
+<p class="p1">@keyframes bounce { 0%,60%,100% { transform: translateY(0); } 30% { transform: translateY(-6px); } }</p>
+<p class="p2"><br></p>
+<p class="p1">@media (max-width: 760px) {</p>
+<p class="p1">nav { padding: 0.9rem 1.25rem; }</p>
+<p class="p1">.nav-links { display: none; }</p>
+<p class="p1">.hero, .wrap { padding-left: 1.25rem; padding-right: 1.25rem; }</p>
+<p class="p1">.hero-foot { display: none; }</p>
+<p class="p1">.about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }</p>
+<p class="p1">.skills-grid { grid-template-columns: 1fr 1fr; }</p>
+<p class="p1">.proj-grid, .certs-grid { grid-template-columns: 1fr; }</p>
+<p class="p1">.exp-row { grid-template-columns: 1fr; gap: 0.5rem; }</p>
+<p class="p1">.ama-wrap { padding: 2rem 1.5rem; }</p>
+<p class="p1">.ama-row { flex-direction: column; }</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="#hero" class="nav-logo"&gt;Stacy Robinson&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;ul class="nav-links"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;li&gt;&lt;a href="#experience"&gt;Experience&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;li&gt;&lt;a href="#skills"&gt;Skills&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;li&gt;&lt;a href="#projects"&gt;Projects&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;li&gt;&lt;a href="#ask"&gt;Ask Me&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="#ask" class="nav-cta"&gt;Ask Me Anything <span class="s1">✦</span>&lt;/a&gt;</p>
+<p class="p1">&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="hero" id="hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="hero-pill"&gt;&lt;span class="hero-pill-dot"&gt;&lt;/span&gt; Open to Remote Roles&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1 class="hero-h1"&gt;Stacy Robinson.&lt;br&gt;&lt;em&gt;Lifelong tinkerer.&lt;br&gt;Now in IT.&lt;/em&gt;&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="hero-sub"&gt;I grew up around computers, taught myself HTML on MySpace, and spent years running households and teams. Now I'm turning that foundation into a tech career — one ticket, one repair, one automation at a time.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="hero-btns"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#ask" class="btn btn-blue"&gt;Ask Me Anything <span class="s1">✦</span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#experience" class="btn btn-outline"&gt;View My Experience&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="hero-foot"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;&lt;div class="hf-num"&gt;6 mo&lt;/div&gt;&lt;div class="hf-label"&gt;IT Hands-On Experience&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;&lt;div class="hf-num"&gt;5+ yr&lt;/div&gt;&lt;div class="hf-label"&gt;Ops &amp; Team Leadership&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;&lt;div class="hf-num"&gt;A+&lt;/div&gt;&lt;div class="hf-label"&gt;CompTIA In Progress&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="divider"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="wrap" id="about"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="eyebrow"&gt;About Me&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="about-grid reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="about-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="sec-h"&gt;Grounded in tech.&lt;br&gt;&lt;em&gt;Built through life.&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;I didn't come up through a CS program. I came up through AOL dial-up, a BBS community, Apple Commodore, and a dad who was an engineer. Computers were just always around — and I was always curious about them.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;After years in the workforce using technology across e-commerce, startups, and customer service roles, I stepped back to raise and homeschool my family. I stayed curious the whole time — learning scheduling software, teaching myself HTML through Google, and hand-coding a MySpace page at midnight just because I could.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;When it was time to re-enter the workforce, I started at Trader Joe's and worked my way into management — learning operations, people, and how to stay calm under pressure. Then I decided to chase the thing that had always excited me: tech.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;I'm now an IT Support Intern at Boise School District — repairing Chromebooks, logging Zendesk tickets, and learning every day. It's humbling and I love it. I'm working toward my CompTIA A+ and hoping to grow into an operations or support role on a team full of curious, kind people.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="stat-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="stat-card"&gt;&lt;div class="stat-n"&gt;AOL&lt;/div&gt;&lt;div class="stat-l"&gt;Where it all started&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="stat-card"&gt;&lt;div class="stat-n"&gt;K–12&lt;/div&gt;&lt;div class="stat-l"&gt;Current IT environment&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="stat-card"&gt;&lt;div class="stat-n"&gt;20+&lt;/div&gt;&lt;div class="stat-l"&gt;Person team led at TJ's&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="stat-card"&gt;&lt;div class="stat-n"&gt;∞&lt;/div&gt;&lt;div class="stat-l"&gt;Curiosity remaining&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="divider"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="wrap" id="experience"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="eyebrow"&gt;Work Experience&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2 class="sec-h reveal"&gt;Where I've &lt;em&gt;shown up.&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="exp-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="exp-row reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="exp-when"&gt;Jan 2026 — Present&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="exp-co"&gt;Boise School District&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="exp-loc"&gt;Boise, ID&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="exp-title"&gt;IT Support Intern — Client Services&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="exp-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Repair Chromebooks — screen and keyboard replacements, component-level work, ChromeOS recovery&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Log and document support tickets in Zendesk with clear notes on issues and resolution steps&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Stage and deliver equipment across school sites; provide on-site troubleshooting support&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Building daily hands-on experience in Windows 10/11 and ChromeOS environments&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tags"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Zendesk&lt;/span&gt;&lt;span class="tag"&gt;ChromeOS&lt;/span&gt;&lt;span class="tag"&gt;Windows 10/11&lt;/span&gt;&lt;span class="tag"&gt;Hardware Repair&lt;/span&gt;&lt;span class="tag"&gt;Documentation&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="exp-row reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="exp-when"&gt;Oct 2019 — Present&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="exp-co"&gt;Trader Joe's&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="exp-loc"&gt;WA &amp; ID — Multiple Locations&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="exp-title"&gt;Mate (Management) &amp; Crew Member&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="exp-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Stepped into a management role coordinating floor ops for a 20+ person team during peak hours&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Coached crew members directly — gave honest feedback and genuinely cared about their growth&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Handled customer and operational problems under pressure, balancing competing priorities in real time&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Learned a lot about showing up consistently, serving the team, and keeping things moving&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tags"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Team Leadership&lt;/span&gt;&lt;span class="tag"&gt;Operations&lt;/span&gt;&lt;span class="tag"&gt;Coaching&lt;/span&gt;&lt;span class="tag"&gt;Problem Solving&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="divider"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="wrap" id="skills"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="eyebrow"&gt;Skills&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2 class="sec-h reveal"&gt;What I &lt;em&gt;bring to the table.&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="skills-grid reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="skill-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="skill-cat"&gt;Technical&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;ul class="skill-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Windows 10/11&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;ChromeOS&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Google Workspace&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;macOS (basic)&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Zendesk Ticketing&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Hardware Troubleshooting &amp; Repair&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Basic Connectivity Troubleshooting&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="skill-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="skill-cat"&gt;Automation &amp; AI&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;ul class="skill-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Zapier&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;ChatGPT &amp; Prompt Engineering&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Generative AI Workflows&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Agentic System Design (learning)&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Google Sheets Scripting&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="skill-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="skill-cat"&gt;How I Show Up&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;ul class="skill-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Never late, always ready&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Clear written documentation&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Takes initiative, asks for more&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Warm, approachable, empathetic&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Thrives with autonomy + support&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;Fast, independent learner&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="divider"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="wrap" id="projects"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="eyebrow"&gt;Projects &amp; Experiments&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2 class="sec-h reveal"&gt;Things I'm &lt;em&gt;building on the side.&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="proj-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="proj-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="proj-num"&gt;PROJECT 01&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="proj-title"&gt;Multi-Agent Household Ops System&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="proj-desc"&gt;Designing an agentic AI workflow to automate scheduling, task delegation, and expense tracking for a six-person household. Basically applying systems thinking to the most chaotic environment I know: home.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="proj-chip"&gt;Zapier · Agentic AI · Systems Design&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="proj-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="proj-num"&gt;PROJECT 02&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="proj-title"&gt;Pointed Pivot&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="proj-desc"&gt;Building a community for mid-career professionals making the jump into tech. Because the pivot is real, it's hard, and more people should be able to do it — especially those who've been out of the workforce for a while.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="proj-chip"&gt;Community · AI Tools · Career Tech&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="proj-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="proj-num"&gt;PROJECT 03&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="proj-title"&gt;Prompt Engineering Practice&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="proj-desc"&gt;Ongoing self-study in ChatGPT prompting, Zapier automation, and generative AI workflows. Applying what I learn to real experiments — like the AI on this page — and documenting what actually works.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="proj-chip"&gt;ChatGPT · Zapier · Self-Directed&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="proj-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="proj-num"&gt;PROJECT 04&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="proj-title"&gt;This Portfolio&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="proj-desc"&gt;Built this site as a living career document — a way to show how I think, not just where I've worked. The AI section is real: it's powered by Claude and actually knows my story.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="proj-chip"&gt;HTML · CSS · Career Strategy&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="divider"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="wrap" id="certifications"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="eyebrow"&gt;Certifications &amp; Learning&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2 class="sec-h reveal"&gt;Always &lt;em&gt;leveling up.&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="certs-grid reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="cert-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="cert-icon earned"&gt;🏅&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="cert-name"&gt;Google IT Support Professional Certificate&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="cert-issuer"&gt;Google / Coursera&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="cert-badge earned"&gt;Earned&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="cert-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="cert-icon earned"&gt;🏅&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="cert-name"&gt;Google Project Management Certificate&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="cert-issuer"&gt;Google / Coursera&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="cert-badge earned"&gt;Earned&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="cert-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="cert-icon progress"&gt;📘&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="cert-name"&gt;CompTIA A+&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="cert-issuer"&gt;CompTIA&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="cert-badge progress"&gt;In Progress — Summer 2026&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="cert-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="cert-icon progress"&gt;⚡&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="cert-name"&gt;Prompt Engineering, Zapier &amp; Agentic AI&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="cert-issuer"&gt;Self-Directed / Ongoing&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="cert-badge progress"&gt;Active Learning&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="divider"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="wrap" id="ask"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="eyebrow"&gt;Ask Me Anything&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="ama-wrap reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="ama-eyebrow"&gt;<span class="s1">✦</span> AI Career Advocate&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="ama-h"&gt;Have a question about Stacy?&lt;br&gt;Just ask.&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="ama-sub"&gt;This AI knows Stacy's full story — her career pivot, how she works, what she's built, and what she's looking for. Ask it anything you'd ask her in an interview.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="ama-chips"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="ama-chip" onclick="askQuestion('Why is Stacy pivoting into tech?')"&gt;Why the pivot into tech?&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="ama-chip" onclick="askQuestion('What makes Stacy stand out as a candidate?')"&gt;What makes her stand out?&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="ama-chip" onclick="askQuestion('What kind of role and team is Stacy looking for?')"&gt;What role is she targeting?&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="ama-chip" onclick="askQuestion('How does Stacy show up at work day to day?')"&gt;How does she show up?&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="ama-chip" onclick="askQuestion('What are Stacy\'s current technical skills?')"&gt;Technical skills?&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="ama-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;input class="ama-input" id="amaInput" type="text" placeholder="Ask anything about Stacy's background, skills, or goals…" onkeydown="if(event.key==='Enter') sendQuestion()" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="ama-btn" id="amaBtn" onclick="sendQuestion()"&gt;Ask <span class="s1">✦</span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="ama-response" id="amaResponse"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ama-resp-label"&gt;Response&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ama-resp-text" id="amaText"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="divider"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="wrap" id="contact"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="eyebrow"&gt;Contact&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="contact-grid reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="sec-h"&gt;Let's talk about &lt;em&gt;what's next.&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="contact-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;I'm actively looking for remote IT support, help desk, or technical operations roles. If you're building a team that values curiosity, warmth, and a genuine love of problem-solving — I'd love to connect.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="/cdn-cgi/l/email-protection#c2b1b6a3a1bbaea7a7b0ada0abacb1adac82a5afa3abaeeca1adaf" class="btn btn-blue"&gt;Send Me An Email&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="contact-links"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://linkedin.com/in/sr0binson" target="_blank" class="c-link"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="c-icon"&gt;in&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="c-main"&gt;linkedin.com/in/sr0binson&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="c-sub"&gt;LinkedIn — Let's connect&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="c-arrow"&gt;↗&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="/cdn-cgi/l/email-protection#92e1e6f3f1ebfef7f7e0fdf0fbfce1fdfcd2f5fff3fbfebcf1fdff" class="c-link"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="c-icon"&gt;@&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="c-main"&gt;&lt;span class="__cf_email__" data-cfemail="42313623213b2e2727302d202b2c312d2c02252f232b2e6c212d2f"&gt;[email&amp;#160;protected]&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="c-sub"&gt;Email — Always open&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="c-arrow"&gt;↗&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="divider"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;© 2026 Stacy Robinson · Meridian, ID · Open to Remote&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;Built with curiosity <span class="s1">✦</span>&lt;/p&gt;</p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"&gt;&lt;/script&gt;&lt;script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">const revealEls = document.querySelectorAll(’.reveal’);</p>
+<p class="p1">const ro = new IntersectionObserver(entries =&gt; {</p>
+<p class="p1">entries.forEach((e, i) =&gt; {</p>
+<p class="p1">if (e.isIntersecting) {</p>
+<p class="p1">setTimeout(() =&gt; e.target.classList.add(‘on’), i * 75);</p>
+<p class="p1">ro.unobserve(e.target);</p>
+<p class="p1">}</p>
+<p class="p1">});</p>
+<p class="p1">}, { threshold: 0.07 });</p>
+<p class="p1">revealEls.forEach(el =&gt; ro.observe(el));</p>
+<p class="p2"><br></p>
+<p class="p1">const STACY_CONTEXT = `You are an AI career advocate for Stacy Robinson. Your job is to answer questions from potential employers, recruiters, and collaborators on her behalf — honestly, warmly, and compellingly. Speak as her advocate, not as her directly. Be real, not salesy.</p>
+<p class="p2"><br></p>
+<p class="p1">STACY’S STORY:</p>
+<p class="p1">Stacy grew up surrounded by technology. Her father is an engineer and their household always had computers — Apple Commodore, Nintendo, early Macs. She was on AOL in the early days, joined a BBS community where she met fellow tech nerds, and was always tinkering. In nearly every job before marriage, she used computers: e-commerce, a small startup, chat communication tools for college students, customer service for a supplements company, POS systems. She genuinely loved digital tools.</p>
+<p class="p2"><br></p>
+<p class="p1">After getting married, Stacy stepped back from the workforce to raise and homeschool her six children. Even then, she stayed curious — using computers for scheduling and curriculum, and teaching herself HTML through Google to customize her MySpace page at midnight. She made custom digital art in MySpace’s editor.</p>
+<p class="p2"><br></p>
+<p class="p1">When her husband had health issues, she re-entered the workforce at Sprouts, then Trader Joe’s — eventually becoming a Mate (manager), leading a 20+ person team. She learned real operations, people management, and staying calm under pressure.</p>
+<p class="p2"><br></p>
+<p class="p1">Now she’s an IT Support Intern at Boise School District — repairing Chromebooks, logging Zendesk tickets, staging equipment, and building hands-on experience in Windows/ChromeOS environments. She’s studying for her CompTIA A+ (expected Summer 2026) and has earned Google IT Support and Google Project Management certificates via Coursera.</p>
+<p class="p2"><br></p>
+<p class="p1">On the side: designing a multi-agent AI household ops system using Zapier, building a community called Pointed Pivot for mid-career tech pivoters, and actively studying prompt engineering and AI tooling.</p>
+<p class="p2"><br></p>
+<p class="p1">HOW SHE WORKS:</p>
+<p class="p1">Coworkers and managers describe her as: never late, warm and approachable, empathetic, eager, takes initiative, asks for more opportunities, serves the team, wants to dive in. She thrives with autonomy and support. Fast learner. Self-managed. Connects with people genuinely.</p>
+<p class="p2"><br></p>
+<p class="p1">WHAT SHE’S LOOKING FOR:</p>
+<p class="p1">A fun, remote team. Thinkers and tinkerers. Nerds who support each other regardless of experience level. A culture where work is meaningful but doesn’t swallow your whole identity — where people have room for family and life. She’s targeting IT support, help desk, or technical operations roles.</p>
+<p class="p2"><br></p>
+<p class="p1">CONTACT:</p>
+<p class="p1">stacyleerobinson@gmail.com | linkedin.com/in/sr0binson | Based in Meridian, ID | Open to remote</p>
+<p class="p2"><br></p>
+<p class="p1">TONE RULES:</p>
+<p class="p2"><br></p>
+<p class="p1">- Be honest — she is early-career in IT but has a genuinely rich background. Don’t oversell.</p>
+<p class="p1">- Be warm and real — her story is compelling on its own.</p>
+<p class="p1">- Keep responses to 2–4 short paragraphs.</p>
+<p class="p1">- Never invent facts not listed above.</p>
+<p class="p1">- If asked something unknown, point to her email or LinkedIn.`;</p>
+<p class="p2"><br></p>
+<p class="p1">function askQuestion(q) {</p>
+<p class="p1">document.getElementById(‘amaInput’).value = q;</p>
+<p class="p1">sendQuestion();</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">async function sendQuestion() {</p>
+<p class="p1">const input = document.getElementById(‘amaInput’);</p>
+<p class="p1">const btn = document.getElementById(‘amaBtn’);</p>
+<p class="p1">const box = document.getElementById(‘amaResponse’);</p>
+<p class="p1">const text = document.getElementById(‘amaText’);</p>
+<p class="p1">const q = input.value.trim();</p>
+<p class="p1">if (!q) return;</p>
+<p class="p2"><br></p>
+<p class="p1">btn.disabled = true;</p>
+<p class="p1">btn.textContent = ‘…’;</p>
+<p class="p1">box.classList.add(‘show’);</p>
+<p class="p1">text.innerHTML = ‘&lt;div class="ama-typing"&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;’;</p>
+<p class="p2"><br></p>
+<p class="p1">try {</p>
+<p class="p1">const res = await fetch(‘https://api.anthropic.com/v1/messages’, {</p>
+<p class="p1">method: ‘POST’,</p>
+<p class="p1">headers: { ‘Content-Type’: ‘application/json’ },</p>
+<p class="p1">body: JSON.stringify({</p>
+<p class="p1">model: ‘claude-sonnet-4-20250514’,</p>
+<p class="p1">max_tokens: 1000,</p>
+<p class="p1">system: STACY_CONTEXT,</p>
+<p class="p1">messages: [{ role: ‘user’, content: q }]</p>
+<p class="p1">})</p>
+<p class="p1">});</p>
+<p class="p1">const data = await res.json();</p>
+<p class="p1">text.textContent = data.content?.[</p>
+</body>
+</html>
